@@ -18,7 +18,8 @@
     </div>
 </template>
 <script>
-import Header from './Header.vue'
+import Header from '../components/Header'
+
 export default {
     name: 'App',
 
@@ -46,7 +47,7 @@ export default {
                 {
                     name:'Python',
                     years:'半年',
-                    content:'個人開発で使用。使用FWはLaravel。'
+                    content:'業務でも使用経験あり、使用FWはなし。個人開発ではDjangoを使用。'
                 },
             ]
         }
