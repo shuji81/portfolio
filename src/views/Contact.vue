@@ -1,6 +1,4 @@
 <template>
-    <div>
-    <Header/>
     <v-main>
         <v-card>
             <v-card-title>お問い合わせ</v-card-title>
@@ -30,16 +28,10 @@
             </v-form>
         </v-card>
     </v-main>
-    </div> 
 </template>
 <script>
-import Header from '../components/Header'
 export default {
-    name: 'App',
-
-    components: {
-        Header
-    },
+    name: 'Contact',
     data(){
         return{
             text1:"",

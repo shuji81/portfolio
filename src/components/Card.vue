@@ -1,12 +1,17 @@
 <template>
     <div class="card prewrap">
-        <v-card 
-         min-width="300px"
-         height="90%"
+        <v-card
+         class="mx-auto my-12"
+         max-width="400"
+         height="100%"
          @click.stop="dialog = true">
-            <v-card-title>{{ title }}</v-card-title>
+            <v-card-title>
+                {{ title }}
+            </v-card-title>
             <v-divider></v-divider>
-            <v-card-text>{{ shortContent }}</v-card-text>
+            <v-card-text>
+                {{ shortContent }}
+            </v-card-text>
             <v-card-action></v-card-action>
         </v-card>
         <v-dialog 

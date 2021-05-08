@@ -1,9 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Top from '@/views/Top.vue'
-import Profile from '@/views/Profile.vue'
-import Skills from '@/views/Skills.vue'
-import Contact from '@/views/Contact.vue'
 
 Vue.use(VueRouter)
 
@@ -13,19 +9,23 @@ const router = new VueRouter({
   routes:[
     {
       path:'/',
-      component:Top
+      component: () => import('@/views/Top.vue')
     },
     {
       path:'/profile',
-      component:Profile
+      component: () => import('@/views/Profile.vue')
+    },
+    {
+      path:'/history',
+      component: () => import('@/views/History.vue')
     },
     {
       path:'/skills',
-      component:Skills
+      component: () => import('@/views/Skills.vue')
     },
     {
       path:'/contact',
-      component:Contact
+      component: () => import('@/views/Contact.vue')
     }
   ]
 })

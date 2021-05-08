@@ -1,29 +1,27 @@
 <template>
-    <div>
-    <Header/>
     <v-main>
-        <h1 class="display-2 font-weight-bold mb-3">
-            しゅうじのプロフィール
-        </h1>
-        <v-row row wrap>
-            <v-col v-for="(skil,index) in profiles" :key="index" xs12 sm6 md4>
-                <v-card>
-                    <v-card-title class="text-center">{{skil.name}}</v-card-title>
-                    <v-divider></v-divider>
-                    <v-card-text>内容：{{skil.content}}</v-card-text>
-                </v-card>
+        <v-container>
+            <v-col xs="12" sm="12" md="12">
+                <p class="text-h3">MY PROFILE</p>
             </v-col>
-        </v-row>
+            <v-row cols="12">
+                <v-col v-for="(profile,index) in profiles" :key="index" xs="12" sm="6" md="6"  align-content="center">
+                    <Card
+                    :title="profile.name"
+                    :content="profile.content"
+                    />
+                </v-col>    
+            </v-row>
+        </v-container>
     </v-main>
-    </div>
 </template>
 <script>
-import Header from '../components/Header'
-export default {
-    name: 'App',
+import Card from '../components/Card.vue'
 
+export default {
+    name: 'Profile',
     components: {
-        Header
+        Card
     },
     data(){
         return{
@@ -51,3 +49,12 @@ export default {
     
 }
 </script>
+<style scoped>
+.profile-bg {
+    background-image: url("~@/assets/profile.jpg");
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: bold;
+}
+</style>

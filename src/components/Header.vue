@@ -1,6 +1,6 @@
 <template>
-    <header>
-      <v-app-bar app dark color="indigo">
+    <v-header>
+      <v-app-bar app dark color="grey darken-2">
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         <v-toolbar-title>Portfolio</v-toolbar-title>
         <!--
@@ -34,7 +34,7 @@
           </v-list-item-group>
         </v-list>
       </v-navigation-drawer>
-    </header>
+    </v-header>
 </template>
 <script>
 export default {
@@ -49,6 +49,10 @@ export default {
                     {
                       name: 'PROFILE',
                       url: '/profile'
+                    },
+                    {
+                      name: 'HISTORY',
+                      url: '/history'
                     },
                     {
                       name: 'SKILLS',
